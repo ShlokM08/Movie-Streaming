@@ -10,14 +10,15 @@ function Home(){
 
     const movies=[
         {id:1,title:"John Wick",release_date:"2000"},
-                {id:1,title:"CIA",release_date:"2025"},
-        {id:1,title:"DSP",release_date:"2023"},
+        {id:2,title:"CIA",release_date:"2025"},
+        {id:3,title:"DSP",release_date:"2023"},
 
     ]
     const handleSearch=(e)=>{
       e.preventDefault()
 
       alert(searchQuery)
+      setSearchQuery("")
 
     }
     return <div className="Home">
@@ -30,9 +31,12 @@ function Home(){
             
         </form>
       <div className="movies-grid">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
-        ))}
+        {movies.map(
+          (movie) => 
+          // movie.title.toLowerCase().startsWith(searchQuery)&&
+          (<MovieCard movie={movie} key={movie.id} />
+        )
+        )}
       </div>
 
 
