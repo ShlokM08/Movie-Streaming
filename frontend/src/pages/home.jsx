@@ -14,7 +14,10 @@ function Home(){
         {id:1,title:"DSP",release_date:"2023"},
 
     ]
-    const handleSearch=()=>{
+    const handleSearch=(e)=>{
+      e.preventDefault()
+
+      alert(searchQuery)
 
     }
     return <div className="Home">
