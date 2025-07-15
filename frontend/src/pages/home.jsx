@@ -47,7 +47,7 @@ function Home() {
         setLoading(false)
       }
 
-      //setSearchQuery("")
+      setSearchQuery("")
 
     }
     return <div className="Home">
