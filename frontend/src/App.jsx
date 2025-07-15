@@ -7,10 +7,12 @@ import MovieCard from './components/MovieCard'
 import Home from "./pages/home"
 import Favorites from './pages/Favorites'
 import Navbar from './components/NavBar'
+import { MovieProvider } from './contexts/MovieContext'
 function App() {
   //const movieNumber=3
 
   return (
+    <MovieProvider>
    <div>
     <Navbar/>
     <main className='main-content'>
@@ -20,6 +22,7 @@ function App() {
     </Routes>
    </main>
    </div>
+   </MovieProvider>
 
     
   
