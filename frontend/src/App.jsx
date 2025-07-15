@@ -6,17 +6,20 @@ import './App.css'
 import MovieCard from './components/MovieCard'
 import Home from "./pages/home"
 import Favorites from './pages/Favorites'
+import Navbar from './components/NavBar'
 function App() {
-  const movieNumber=3
+  //const movieNumber=3
 
   return (
-   <main className='main-content'>
+   <div>
+    <Navbar/>
+    <main className='main-content'>
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path ="/favorites" element={<Favorites/>}/>
-
     </Routes>
    </main>
+   </div>
 
     
   
