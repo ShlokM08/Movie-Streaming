@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
+import './/css/App.css'
 import MovieCard from './components/MovieCard'
 import Home from "./pages/home"
 import Favorites from './pages/Favorites'
