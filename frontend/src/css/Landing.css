@@ -1,0 +1,34 @@
+.hero { min-height: 62vh; display: flex; align-items: center; background-size: cover; background-position: center; position: relative; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 300px at 10% 10%, rgba(37,99,235,.14), transparent 60%); pointer-events: none; }
+.hero-inner { padding: 5rem 0; max-width: 720px; }
+.eyebrow { color: var(--light-blue); text-transform: uppercase; letter-spacing: .22em; font-size: .8rem; margin-bottom: .8rem; }
+.hero-title { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.02; font-weight: 900; }
+.hero-title span { color: #eab308; }
+.hero-sub { margin-top: 1rem; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); }
+.hero-actions { margin-top: 1.6rem; display: flex; gap: .8rem; }
+.btn { border-radius: 12px; padding: .9rem 1.2rem; font-weight: 700; }
+.btn-primary { background: linear-gradient(180deg, var(--blue), var(--blue-600)); color: white; }
+.btn-ghost { background: rgba(15,23,42,.55); border: 1px solid rgba(148,163,184,.22); color: var(--text); }
+
+
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .6rem; }
+.section-head h2 { font-size: 2rem; }
+.section-head .muted { color: var(--muted); }
+
+
+/* Horizontal rail for trending */
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 260px); gap: 1rem; overflow-x: auto; padding-bottom: .5rem; scroll-snap-type: x mandatory; }
+.rail > * { scroll-snap-align: start; }
+
+
+/* Navbar search */
+.nav-search { flex: 1; display: flex; justify-content: center; }
+.nav-search input { width: min(680px, 70%); background: rgba(15,23,42,.65); border: 1px solid rgba(148,163,184,.18); border-radius: 999px; padding: .7rem 1rem; color: var(--text); }
+.nav-search input::placeholder { color: rgba(148,163,184,.75); }
+.nav-search input:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 4px var(--ring); }
+.nav-search button { margin-left: .5rem; border-radius: 999px; }
+
+
+/* MovieCard tweaks */
+.rating-badge { position: absolute; top: .6rem; left: .6rem; background: linear-gradient(180deg, rgba(250,204,21,.96), rgba(250,204,21,.88)); color: #111827; font-weight: 800; font-size: .8rem; padding: .25rem .5rem; border-radius: 999px; box-shadow: 0 0 22px rgba(250,204,21,.35); }
+.rail-card { width: 100%; }

@@ -1,28 +1,25 @@
-//forver
-import "../css/Favorites.css"
-import { useMovieContext } from "../contexts/MovieContext"
-import MovieCard from "../components/MovieCard"
+import "../css/Favorites.css";
+import { useMovieContext } from "../contexts/MovieContext";
+import MovieCard from "../components/MovieCard";
 function Favorites(){
-
-    const {favorites} = useMovieContext()
-    if(favorites){
-        return<div className="favorites">
-            <h2>Your Favourites</h2>
-            <div className="movies-grid">
-        {favorites.map(
-          (movie) => 
-          // movie.title.toLowerCase().startsWith(searchQuery)&&
-          (<MovieCard movie={movie} key={movie.id} />
-        )
-        )}
-      </div>
-        </div>
-        
-    }
-    return <div className="favorites-empty">
-        <h2>No favorite movies yet</h2>
-        <p>start adding your fav movies here to store them</p>
-    </div>
-    
+const { favorites } = useMovieContext();
+if (favorites && favorites.length) {
+return (
+<div className="favorites section">
+<div className="container">
+<h2>Your Favorites</h2>
+<div className="movies-grid">
+{favorites.map((movie) => (<MovieCard movie={movie} key={movie.id} />))}
+</div>
+</div>
+</div>
+);
 }
-export default Favorites
+return (
+<div className="favorites-empty section">
+<h2>No favorite movies yet</h2>
+<p>Start adding your favorite movies here to store them.</p>
+</div>
+);
+}
+export default Favorites;
