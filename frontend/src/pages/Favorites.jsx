@@ -7,7 +7,7 @@ if (favorites && favorites.length) {
 return (
 <div className="favorites section">
 <div className="container">
-<h2>Your Favorites</h2>
+<h2>Your Favourites</h2>
 <div className="movies-grid">
 {favorites.map((movie) => (<MovieCard movie={movie} key={movie.id} />))}
 </div>

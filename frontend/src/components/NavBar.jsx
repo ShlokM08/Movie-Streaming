@@ -27,7 +27,7 @@ function NavBar() {
             className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
             aria-current={({ isActive }) => (isActive ? "page" : undefined)}
           >
-            Favorites
+            Favourites
           </NavLink>
         </div>
       </div>
