@@ -26,3 +26,9 @@ export async function getMovieVideos(movieId) {
   const trailers = yt.filter(v => v.type === "Trailer");
   return (trailers.length ? trailers : yt).sort((a, b) => (b.official === true) - (a.official === true));
 }
+// Movie details (for favorites on trailer page)
+export async function getMovieDetails(movieId) {
+  const res = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
+  if (!res.ok) throw new Error("Failed to fetch movie details");
+  return res.json();
+}

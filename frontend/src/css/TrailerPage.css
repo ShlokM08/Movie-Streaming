@@ -16,3 +16,36 @@
 
 .trp-error { color:#fecaca; background: rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.35);
   padding:.9rem 1.1rem; border-radius:12px; width:fit-content; margin:2rem auto 0; }
+/* Header layout already exists in your file */
+.trp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+.trp-title {
+  margin-inline-start: auto;  /* push favorite button to the right on small screens? remove if you prefer */
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Favorite button (reuses your palette) */
+.trp-fav {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.75);
+  color: #e5e7eb;
+  padding: 0.55rem 0.85rem;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .25s ease;
+}
+.trp-fav:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+  border-color: rgba(37, 99, 235, 0.5);
+}
+.trp-fav.active {
+  background: linear-gradient(180deg, rgba(225,17,72,.95), rgba(225,17,72,.85));
+  border-color: rgba(225,17,72,.6);
+}
