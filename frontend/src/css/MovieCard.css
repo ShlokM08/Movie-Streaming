@@ -10,4 +10,26 @@
 .movie-info { padding: .9rem; display: flex; flex-direction: column; gap: .45rem; }
 .movie-info h3 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .movie-info p { color: var(--muted); font-size: .9rem; }
-.user-rating { color: #ffd700; font-size: .9rem; margin-top: auto; }
+.user-rating { color: #ffd700; font-size: .9rem; margin-top: auto; 
+.overlay-actions {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.trailer-btn {
+  border: 1px solid rgba(148,163,184,0.25);
+  background: rgba(15,23,42,0.75);
+  color: #e5e7eb;
+  padding: .45rem .7rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .25s ease;
+}
+.trailer-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37,99,235,0.28);
+  border-color: rgba(37,99,235,0.5);
+}
+}

@@ -1,0 +1,18 @@
+.trp-wrap { min-height: 100vh; background: #0a0f1d; color: #e5e7eb; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.trp-header { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 0; }
+.trp-back { color: #93c5fd; text-decoration: none; }
+.trp-back:hover { color: #fff; }
+.trp-title { font-size: 1.25rem; font-weight: 800; margin: 0; }
+
+.trp-main { padding: 1rem 0 2rem; }
+.trp-player { position: relative; padding-top: 56.25%; border-radius: 14px; overflow: hidden;
+  border: 1px solid rgba(148,163,184,.2); background:#0b1224; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+.trp-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.trp-spinner { width: 56px; height: 56px; border: 4px solid rgba(255,255,255,.15);
+  border-top-color:#60a5fa; border-radius: 50%; margin: 4rem auto; animation: trp-spin .9s linear infinite; }
+@keyframes trp-spin { to { transform: rotate(360deg); } }
+
+.trp-error { color:#fecaca; background: rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.35);
+  padding:.9rem 1.1rem; border-radius:12px; width:fit-content; margin:2rem auto 0; }

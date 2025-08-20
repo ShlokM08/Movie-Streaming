@@ -7,6 +7,8 @@ import MovieCard from './components/MovieCard'
 import Home from "./pages/home"
 import Favorites from './pages/Favorites'
 import Navbar from './components/NavBar'
+import Trailer from "./pages/Trailer";
+
 import { MovieProvider } from './contexts/MovieContext'
 function App() {
   //const movieNumber=3
@@ -19,6 +21,7 @@ function App() {
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path ="/favorites" element={<Favorites/>}/>
+    <Route path="/movie/:id/trailer" element={<Trailer />} />
     </Routes>
    </main>
    </div>

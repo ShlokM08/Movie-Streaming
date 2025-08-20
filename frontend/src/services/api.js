@@ -14,3 +14,15 @@ export const searchMovies = async (query) => {
   const data     = await response.json();            // ← **await** here too
   return data.results;
 };
+// --- Trailer videos (TMDB) ---
+
+
+export async function getMovieVideos(movieId) {
+  const res = await fetch(`${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}`);
+  if (!res.ok) throw new Error("Failed to fetch videos");
+  const data = await res.json();
+  // Prefer official YouTube trailers; fall back to any YouTube video if none
+  const yt = (data.results || []).filter(v => v.site === "YouTube");
+  const trailers = yt.filter(v => v.type === "Trailer");
+  return (trailers.length ? trailers : yt).sort((a, b) => (b.official === true) - (a.official === true));
+}
